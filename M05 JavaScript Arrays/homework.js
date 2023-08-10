@@ -22,7 +22,16 @@ function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
-
+   /*var nuevoArray = [];
+   for (var i = 0; i < array.length; i++) {
+      nuevoArray.push(array[i] + 1);
+   }
+   return nuevoArray;
+}*/
+   var nuevoArray = array.map(function (elemento) {
+      return elemento + 1;
+   })
+   return nuevoArray;
 }
 
 function agregarItemAlFinalDelArray(array, elemento) {
@@ -47,18 +56,32 @@ function dePalabrasAFrase(palabras) {
    // con un espacio entre cada palabra.
    // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'.
    // Tu código:
+   var frase = palabras.reduce(function (acumulador, elemento) {
+      return acumulador + '' + elemento;
+   });
+   return frase;
+
 }
 
 function arrayContiene(array, elemento) {
    // Verifica si el elemento existe dentro del arreglo recibido.
    // Retornar true si está, o false si no está.
    // Tu código:
+   if (arguments[2]) {
+      return true;
+
+   } else {
+      return false;
+   }
 }
 
 function agregarNumeros(arrayOfNums) {
    // El parámetro "arrayOfNums" debe ser un arreglo de números.
    // Suma todos los elementos y retorna el resultado.
    // Tu código:
+   /*for (var arg of arrayOfNums) {
+      var suma=
+   }*/
 }
 
 function promedioResultadosTest(resultadosTest) {
